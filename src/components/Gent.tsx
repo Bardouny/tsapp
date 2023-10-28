@@ -1,13 +1,17 @@
 import * as React from 'react';
 
 type GenP = {
-    name:string,
+    name:string
+    children : React.ReactNode
 }
 
 
-function Gen({name}:GenP) {
+function Gen({name ,children}:GenP) {
     return ( 
+        <>
         <h1>Welcome : {name}</h1>
+        {children}
+        </>
      );
 }
 
